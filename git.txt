@@ -61,3 +61,9 @@
 	另一种情况是删错了，因为版本库里还有呢，所以可以很轻松地把误删的文件恢复到最新版本：
 
 	$ git checkout -- test.txt
+14：生成远端秘钥
+	$ ssh-keygen -t rsa -C "your_email@youremail.com"
+15：要关联一个远程库，使用命令git remote add origin git@server-name:path/repo-name.git
+16：关联后，使用命令git push -u origin master第一次推送master分支的所有内容；
+		把本地库的内容推送到远程，用git push命令，实际上是把当前分支master推送到远程。	
+	此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改
