@@ -67,3 +67,16 @@
 16：关联后，使用命令git push -u origin master第一次推送master分支的所有内容；
 		把本地库的内容推送到远程，用git push命令，实际上是把当前分支master推送到远程。	
 	此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改
+17：我们创建dev分支，然后切换到dev分支：
+
+	$ git checkout -b dev
+		git checkout命令加上-b参数表示创建并切换，相当于以下两条命令：
+
+		$ git branch dev
+		$ git checkout dev
+18：git branch命令查看当前分支：
+
+	$ git branch
+		* dev
+		master
+			git branch命令会列出所有分支，当前分支前面会标一个*号。
