@@ -1,2 +1,24 @@
 ﻿1：通过git init命令把这个目录变成Git可以管理的仓库：
 	$ git init
+2：用命令git add告诉Git，把文件添加到仓库：
+
+	$ git add readme.txt
+3：用命令git commit告诉Git，把文件提交到仓库：
+	$ git commit -m "wrote a readme file"
+4：为什么Git添加文件需要add，commit一共两步呢？因为commit可以一次提交很多文件，所以你可以多次add不同的文件，比如：
+	$ git add file1.txt
+	$ git add file2.txt file3.txt
+	$ git commit -m "add 3 files."
+5：运行git status命令看看结果：			git status命令可以让我们时刻掌握仓库当前的状态，上面的命令输出告诉我们，readme.txt被修改过了，但还没有准备提交的修改。
+	$ git status
+	On branch master
+	Changes not staged for commit:
+	(use "git add <file>..." to update what will be committed)
+	(use "git checkout -- <file>..." to discard changes in working directory)
+	
+		modified:   readme.txt
+
+	no changes added to commit (use "git add" and/or "git commit -a")
+6：虽然Git告诉我们readme.txt被修改了，但如果能看看具体修改了什么内容，自然是很好的。比如你休假两周从国外回来，第一天上班时，已经记不清上次怎么修改的readme.txt，所以，
+	需要用git diff这个命令看看：		git diff顾名思义就是查看difference，显示的格式正是Unix通用的diff格式，可以从上面的命令输出看到，我们在第一行添加了一个distributed单词
+		$ git diff readme.txt 
