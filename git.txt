@@ -89,4 +89,4 @@
 20：就可以放心地删除dev分支了：
 
 	$ git branch -d dev
-21：点
+21：git log --graph命令可以看到分支合并图
