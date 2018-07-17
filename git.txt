@@ -39,3 +39,5 @@
 		穿梭前，用git log可以查看提交历史，以便确定要回退到哪个版本。
 
 		要重返未来，用git reflog查看命令历史，以便确定要回到未来的哪个版本。
+10：提交后，用git diff HEAD -- readme.txt命令可以查看工作区和版本库里面最新版本的区别
+	$ git diff HEAD -- readme.txt 
