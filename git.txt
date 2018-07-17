@@ -22,4 +22,7 @@
 6：虽然Git告诉我们readme.txt被修改了，但如果能看看具体修改了什么内容，自然是很好的。比如你休假两周从国外回来，第一天上班时，已经记不清上次怎么修改的readme.txt，所以，
 	需要用git diff这个命令看看：		git diff顾名思义就是查看difference，显示的格式正是Unix通用的diff格式，可以从上面的命令输出看到，我们在第一行添加了一个distributed单词
 		$ git diff readme.txt 
-7：
+7：版本控制系统肯定有某个命令可以告诉我们历史记录，在Git中，我们用git log命令查看：
+		$ git log
+		如果嫌输出信息太多，看得眼花缭乱的，可以试试加上--pretty=oneline参数：
+		$ git log --pretty=oneline
