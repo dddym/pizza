@@ -26,4 +26,10 @@
 		$ git log
 		如果嫌输出信息太多，看得眼花缭乱的，可以试试加上--pretty=oneline参数：
 		$ git log --pretty=oneline
-8：
+8：现在，我们要把当前版本append GPL回退到上一个版本add distributed，就可以使用git reset命令：
+
+	$ git reset --hard HEAD^
+	HEAD is now at e475afc add distributed
+	也可以
+	$ git reset --hard 1094a按照版本号回退
+9：
